@@ -1,0 +1,110 @@
+ <!-- 사진 수정
+ ui 손좀 더보기
+ ending페이지 기능추가 및 손보기 -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="WorldCupTitle">제1회 복소수 이모티콘 섹시이상형 월드컵</h1>
+    <div class="StartForm">
+        <h3>라운드를 선택해주세요.</h3>
+        <select name="RoundSelect" id="RoundSelect">
+            <option value="32">
+                32강
+            </option>
+            <option value="16">
+                16강
+            </option>
+            <option value="8">
+                8강
+            </option>
+            <option value="4">
+                4강
+            </option>
+        </select>
+        <button id="StartButton">시작하기</button>
+    </div>
+
+
+
+    <div class="InGame hidden">
+        <div class="img1">
+            <h1 id="title1">사진제목1</h1>
+        </div>
+        <div class="img2">
+            <h1 id="title2">사진제목2</h1>
+        </div>
+    </div>
+
+
+    <div class="InGameEnding hidden">
+        <h1 style="color : gold; font-size: 60px; margin-bottom: 0px; margin-top: -10px;">우승자!!</h1>
+        <button style="float: right; margin-right: 10%; width: 200px; height: 40px;" onclick="window.location.reload()">다시하기</button>
+        <div class="WinnerImg">
+            <h1 id="WinnerTitle" style="color:aliceblue">사진제목1</h1>
+        </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+</body>
+
+
+
+<style>
+    #title1,
+    #title2 {
+        color: white;
+        text-shadow: 2px 2px 3px black;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    .hidden {
+        display: none;
+
+    }
+
+
+    .img1 {
+        float: left;
+        width: 50%;
+        height: 80vh;
+        background-size: cover;
+        background-image: url('./img/1.jpg');
+    }
+
+    .img2 {
+        float: right;
+        width: 50%;
+        height: 80vh;
+        background-size: cover;
+        background-image: url('./img/2.png');
+    }
+
+    .WinnerImg {
+        float: left;
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+        height: 80vh;
+        background-size: cover;
+        background-image: url('./img/2.png');
+    }
+
+    .Selected {
+        margin-left: 25%;
+        margin-right: 25%;
+        transition: all 1s;
+    }
+</style>
+
+</html>
